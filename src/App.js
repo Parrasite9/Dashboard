@@ -17,19 +17,19 @@ const App = () => {
         </div>
 
         {/* REVIEWS  */}
-        <div>
+        <div className="reviews" >
           <h3>Reviews</h3>
           <h2>1,281</h2>
         </div>
 
         {/* AVERAGE RATING  */}
-        <div>
+        <div className="average-rating">
           <h3>Average Rating</h3>
           <h2>4.6</h2>
         </div>
 
         {/* SENTIMENT ANALYSIS  */}
-        <div>
+        <div className="analysis">
           <h3>Sentiment Analysis</h3>
           <ul>
             <li>960</li>
@@ -39,7 +39,7 @@ const App = () => {
         </div>
 
         {/* WEBSITE VISITORS  */}
-        <div>
+        <div className="web-visitors">
           <h3>Website Visitors</h3>
           <h2>821</h2>
         </div>
