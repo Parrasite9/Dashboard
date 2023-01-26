@@ -3,48 +3,51 @@ import { useState, useEffect } from "react";
 const App = () => {
   return (
     <>
-      <div className="grid-container">
+      <div class="container-fluid mt-5">
+        <div class="row">
 
-        {/* SIDEBAR  */}
-        <div className="grid-sidebar">
-          <ul>
-            <li href="#"><a>Dashboard</a></li>
-            <li href="#"><a>Reviews</a></li>
-            <li href="#"><a>Average Rating</a></li>
-            <li href="#"><a>Sentiment Analysis</a></li>
-            <li href="#"><a>Website Vistors</a></li>
-          </ul>
+          {/* SIDEBAR*/}
+          <div class="col-3 sidebar mt-5">
+            <ul className="list-unstyled">
+              <li><a href="#">DASHBOARD</a></li>
+              <li><a href="#">WIDGET</a></li>
+              <li><a href="#">REVIEWS</a></li>
+              <li><a href="#">CUSTOMERS</a></li>
+              <li><a href="#">ONLINE ANALYSIS</a></li>
+              <li><a href="#">SETTINGS</a></li>
+            </ul>
+          </div>
+
+
+          <div class="col-9">
+            <div class="row mb-5">
+              {/* REVIEWS */}
+              <div class="col-4">
+                <h5 className="fs-6">REVIEWS</h5>
+                <h2 className="fs-1">1281</h2>
+              </div>
+
+              <div class="col-4 mb-5">
+                {/* AVERAGE RATING */}
+                <h1 className="fs-6">AV RATING</h1>
+                <h2 className="fs-1">4.6</h2>
+              </div>
+
+              <div class="col-4 mb-5">
+                {/* SENTIMENT ANALYSIS */}
+                <h1 className="fs-6">SENTIMENT ANALYSIS</h1>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-12">
+                {/* <!-- bottom grid item content here --> */}
+                <h1 className="fs-6">WEBSITE VISITORS</h1>
+              </div>
+            </div>
+          </div>
         </div>
-
-        {/* REVIEWS  */}
-        <div className="reviews" >
-          <h3>Reviews</h3>
-          <h2>1,281</h2>
-        </div>
-
-        {/* AVERAGE RATING  */}
-        <div className="average-rating">
-          <h3>Average Rating</h3>
-          <h2>4.6</h2>
-        </div>
-
-        {/* SENTIMENT ANALYSIS  */}
-        <div className="analysis">
-          <h3>Sentiment Analysis</h3>
-          <ul>
-            <li>960</li>
-            <li>122</li>
-            <li>321</li>
-          </ul>
-        </div>
-
-        {/* WEBSITE VISITORS  */}
-        <div className="web-visitors">
-          <h3>Website Visitors</h3>
-          <h2>821</h2>
-        </div>
-
       </div>
+
     </>
   )
 }
