@@ -1,6 +1,44 @@
 import { useState, useEffect } from "react";
+import BarChart from "./components/BarChart";
+import { ChartData } from "./Data";
+import LineChart from "./components/LineChart";
+
+
+import React from "react";
+// import { Chart as ChartJS,
+//         categoryScale, 
+//         LinearScale, 
+//         BarElement,
+//         Title, 
+//         Tooltip, 
+//         Legend } from 'chart.js'
+
+import { Bar, Line } from 'react-chartjs-2'
+
+// ChartJS.register (
+//     categoryScale, 
+//     LinearScale, 
+//     BarElement,
+//     Title, 
+//     Tooltip, 
+//     Legend
+// )
+
 
 const App = () => {
+
+  const [chartData, setChartData] = useState({
+    // LABELS CAN BE CONSIDERED THE NAME ON THE X & Y AXIS 
+    // IN THIS EXAMPLE, I HAVE YEARS AS DATA, 2016-2022, THIS WOULD BE LABEL 
+    labels: [ChartData.map((data) => data.year)],
+    datasets: [{
+        label: "Users Gained",
+        // type: Line,
+        data: ChartData.map((data) => data.userGain),
+        // backgroundColor: ["red"]
+    }],
+})
+
   return (
     <>
       <div class="container-fluid mt-5">
@@ -42,12 +80,13 @@ const App = () => {
               <div class="col-12">
                 {/* <!-- bottom grid item content here --> */}
                 <h1 className="fs-6">WEBSITE VISITORS</h1>
+                {/* <BarChart chartData={chartData} /> */}
+                <LineChart chartData={chartData} />
               </div>
             </div>
           </div>
         </div>
       </div>
-
     </>
   )
 }
