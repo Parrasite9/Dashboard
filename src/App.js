@@ -22,9 +22,12 @@ import PersonSearchIcon from '@mui/icons-material/PersonSearch'
 import InsightsIcon from '@mui/icons-material/Insights'
 import SettingsIcon from '@mui/icons-material/Settings'
 
-const App = () => {
+// AVATARS 
+import Avatar from '@mui/material/Avatar'
+import Stack from '@mui/material/Stack'
+import { deepOrange, deepPurple } from '@mui/material/colors'
 
-  // const [value, setValue] = useState(dayjs('2022-04-07'))
+const App = () => {
 
   const reviewPercent = Math.round((Math.random() * 50 + 10) * 10) / 10
   const positive = Math.floor((Math.random() * 499 + 500 ))
@@ -53,6 +56,9 @@ const App = () => {
 
           {/* SIDEBAR*/}
           <div class="col-3 sidebar pt-5 nav-cell">
+
+            <h1 className="logo">LOGO</h1>
+
             <ul className="list-unstyled">
               <li><DashboardIcon fontSize="small"/><a href="#">DASHBOARD</a></li>
               <li><WidgetsIcon fontSize="small" /><a href="#">WIDGET</a></li>
@@ -60,15 +66,19 @@ const App = () => {
               <li><PersonSearchIcon fontSize="small" /><a href="#">CUSTOMERS</a></li>
               <li><InsightsIcon fontSize="small" /><a href="#">ONLINE ANALYSIS</a></li>
               <li><SettingsIcon fontSize="small" /><a href="#">SETTINGS</a></li>
-              {/* <li><Button variant="contained">DASHBOARD</Button></li>
-              <li><Button variant="contained">WIDGET</Button></li>
-              <li><Button variant="contained">REVIEWS</Button></li>
-              <li><Button variant="contained">CUSTOMERS</Button></li>
-              <li><Button variant="contained">ONLINE ANALYSIS</Button></li>
-              <li><Button variant="contained">SETTINGS</Button></li> */}
-
             </ul>
+
+            <div class="avatars">
+              <h5 className="fs-6 ">Currently Online</h5>
+              <Stack direction="row" spacing={2}>
+                <Avatar>H</Avatar>
+                <Avatar sx={{bgcolor: deepOrange[500]}}>N</Avatar>
+                <Avatar sx={{bgcolor: deepPurple[500]}}>OP</Avatar>
+              </Stack>
           </div>
+          </div>
+
+
 
 
           <div class="col-9">
