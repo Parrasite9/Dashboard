@@ -74,9 +74,24 @@ body {
  a {
   color: #03001C;
   text-decoration: none;
-  padding-left: 15%;
+  padding-left: 3%;
  }
+ 
+ a:hover {
+  color: white;
+ }
+
+ /* HomeIcon {
+  padding-left: 15%;
+ } */
+
 
 li {
   padding-bottom: 5%;
+  padding-left: 15%;
 }
+
+li:hover {
+  /* background-color: #03001C; */
+  color: white;
+ }

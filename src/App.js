@@ -14,6 +14,14 @@ import Button from '@mui/material/Button'
 // RATING 
 import Rating from '@mui/material/Rating'
 
+// ICONS FROM https://mui.com/material-ui/material-icons/?query=widget
+import DashboardIcon from '@mui/icons-material/Dashboard'
+import WidgetsIcon from '@mui/icons-material/Widgets'
+import ReviewsIcon from '@mui/icons-material/Reviews'
+import PersonSearchIcon from '@mui/icons-material/PersonSearch'
+import InsightsIcon from '@mui/icons-material/Insights'
+import SettingsIcon from '@mui/icons-material/Settings'
+
 const App = () => {
 
   // const [value, setValue] = useState(dayjs('2022-04-07'))
@@ -46,12 +54,12 @@ const App = () => {
           {/* SIDEBAR*/}
           <div class="col-3 sidebar pt-5 nav-cell">
             <ul className="list-unstyled">
-              <li><a href="#">DASHBOARD</a></li>
-              <li><a href="#">WIDGET</a></li>
-              <li><a href="#">REVIEWS</a></li>
-              <li><a href="#">CUSTOMERS</a></li>
-              <li><a href="#">ONLINE ANALYSIS</a></li>
-              <li><a href="#">SETTINGS</a></li>
+              <li><DashboardIcon fontSize="small"/><a href="#">DASHBOARD</a></li>
+              <li><WidgetsIcon fontSize="small" /><a href="#">WIDGET</a></li>
+              <li><ReviewsIcon fontSize="small" /><a href="#">REVIEWS</a></li>
+              <li><PersonSearchIcon fontSize="small" /><a href="#">CUSTOMERS</a></li>
+              <li><InsightsIcon fontSize="small" /><a href="#">ONLINE ANALYSIS</a></li>
+              <li><SettingsIcon fontSize="small" /><a href="#">SETTINGS</a></li>
               {/* <li><Button variant="contained">DASHBOARD</Button></li>
               <li><Button variant="contained">WIDGET</Button></li>
               <li><Button variant="contained">REVIEWS</Button></li>
