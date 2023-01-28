@@ -38,20 +38,13 @@ const App = () => {
     }],
 })
 
-const [checked, setChecked] = useState(true)
-
-const handleChecked = (e) => {
-  setChecked(e.target.checked)
-}
-
-
   return (
     <>
-      <div class="container-sm mt-5">
-        <div class="row">
+      <div class="dash-container" >
+        <div class="row" >
 
           {/* SIDEBAR*/}
-          <div class="col-3 sidebar mt-5">
+          <div class="col-3 sidebar pt-5 nav-cell">
             <ul className="list-unstyled">
               <li><a href="#">DASHBOARD</a></li>
               <li><a href="#">WIDGET</a></li>
@@ -71,15 +64,15 @@ const handleChecked = (e) => {
 
 
           <div class="col-9">
-            <div class="row mb-5">
+            <div class="row">
               {/* REVIEWS */}
-              <div class="col-4">
-                <h5 className="fs-6">REVIEWS</h5>
+              <div class="col-4 cell border border-5 border-primary-subtle">
+                <h5 className="fs-6 pt-2">REVIEWS</h5>
                 <h2 className="fs-1">{totalReviews}</h2>
                 <h5 className="fs-6">You have got <span className="text-success">{reviewPercent}%</span>more reviews than last week!</h5>
                 
                 <div className="container">
-                  <div className="row">
+                  <div className="row mt-5">
                     <div className="col">
                       <h5 className="fs-6">{positive}</h5>
                       <h5 className="fs-6 text-success">POSITIVE</h5>
@@ -94,9 +87,9 @@ const handleChecked = (e) => {
 
               </div>
 
-              <div class="col-4 mb-5">
+              <div class="col-4 cell border border-5 border-primary-subtle">
                 {/* AVERAGE RATING */}
-                <h1 className="fs-6">AV RATING</h1>
+                <h1 className="fs-6 pt-2">AV RATING</h1>
                 <h2 className="fs-1">{rating}</h2>
                 <Rating name="half-rating" defaultValue={rating} precision={0.5}  />
                 <br />
@@ -104,16 +97,16 @@ const handleChecked = (e) => {
 
               </div>
 
-              <div class="col-4 mb-5">
+              <div class="col-4 cell border border-5 border-primary-subtle">
                 {/* SENTIMENT ANALYSIS */}
-                <h1 className="fs-6">SENTIMENT ANALYSIS</h1>
+                <h1 className="fs-6 pt-2">SENTIMENT ANALYSIS</h1>
                 <DonutChart chartData={chartData} />
               </div>
             </div>
-            <div class="row">
-              <div class="col-12">
+            <div class="row cell border border-5 border-primary-subtle">
+              <div class="col-12 ">
                 {/* <!-- bottom grid item content here --> */}
-                <h1 className="fs-6">WEBSITE VISITORS</h1>
+                <h1 className="fs-6 pt-2">WEBSITE VISITORS</h1>
                 {/* <BarChart chartData={chartData} /> */}
                 <LineChart chartData={chartData} />
               </div>

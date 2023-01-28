@@ -56,3 +56,18 @@ code {
   margin-bottom: 2%;
 }
  */
+
+body {
+  background-color: #301E67;
+  color: white;
+}
+
+.dash-container {
+  margin: 5% 20%;
+  background-color: #5B8FB9;
+ }
+
+ .cell {
+  background-color: #03001C;
+ }
+
