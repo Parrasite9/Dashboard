@@ -14,17 +14,6 @@ import Button from '@mui/material/Button'
 // RATING 
 import Rating from '@mui/material/Rating'
 
-// import { AdaptDayjs } from '@mui/x-date-pickers/LocalizationProvider'
-// import { LocalizationProvider } from '@mui/x-date-pickers/LocalizationProvider'
-// import { StaticDatePicker } from '@mui/x-date-pickers/LocalizationProvider'
-// import dayjs from 'dayjs'
-
-// const isWeekend = (date) => {
-//   const day = date.day();
-
-//   return day === 0 || day === 6;
-// }
-
 const App = () => {
 
   // const [value, setValue] = useState(dayjs('2022-04-07'))
@@ -33,6 +22,7 @@ const App = () => {
   const positive = Math.floor((Math.random() * 499 + 500 ))
   const negative = Math.floor(Math.random() * 500)
   const totalReviews = positive + negative
+  const rating = Math.round((Math.random() * 3.5 + 1.5) * 10) / 10
 
   const [chartData, setChartData] = useState({
     // LABELS CAN BE CONSIDERED THE NAME ON THE X & Y AXIS 
@@ -48,10 +38,16 @@ const App = () => {
     }],
 })
 
+const [checked, setChecked] = useState(true)
+
+const handleChecked = (e) => {
+  setChecked(e.target.checked)
+}
+
 
   return (
     <>
-      <div class="container-fluid mt-5">
+      <div class="container-sm mt-5">
         <div class="row">
 
           {/* SIDEBAR*/}
@@ -80,18 +76,18 @@ const App = () => {
               <div class="col-4">
                 <h5 className="fs-6">REVIEWS</h5>
                 <h2 className="fs-1">{totalReviews}</h2>
-                <h5 className="fs-6">You have got <span className="--bs-success">{reviewPercent}%</span>more reviews than last week!</h5>
+                <h5 className="fs-6">You have got <span className="text-success">{reviewPercent}%</span>more reviews than last week!</h5>
                 
                 <div className="container">
                   <div className="row">
                     <div className="col">
                       <h5 className="fs-6">{positive}</h5>
-                      <h5 className="fs-6">POSITIVE</h5>
+                      <h5 className="fs-6 text-success">POSITIVE</h5>
                     </div>
 
                     <div className="col">
                       <h5 className="fs-6">{negative}</h5>
-                      <h5 className="fs-6">NEGATIVE</h5>
+                      <h5 className="fs-6 text-danger">NEGATIVE</h5>
                     </div>
                   </div>
                 </div>
@@ -101,8 +97,11 @@ const App = () => {
               <div class="col-4 mb-5">
                 {/* AVERAGE RATING */}
                 <h1 className="fs-6">AV RATING</h1>
-                <h2 className="fs-1">4.6</h2>
-                <Rating name="half-rating" defaultValue={4.5} precision={0.5} />
+                <h2 className="fs-1">{rating}</h2>
+                <Rating name="half-rating" defaultValue={rating} precision={0.5}  />
+                <br />
+                <Button className="mt-5" variant="contained">Random Button</Button>
+
               </div>
 
               <div class="col-4 mb-5">
@@ -122,18 +121,6 @@ const App = () => {
           </div>
         </div>
       </div>
-
-      {/* <LocalizationProvider dateAdapter={AdapterDayjs}>
-        <StaticDatePicker 
-        orientation="landscape"
-        openTo="day"
-        value={value}
-        shouldDisableDate={isWeekend}
-        onChange={(newValue) => {
-          setValue(newValue);
-        }}
-        renderInput={(params) => <TextField {...params} />} />
-      </LocalizationProvider> */}
     </>
   )
 }
