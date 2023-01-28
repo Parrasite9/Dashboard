@@ -71,3 +71,12 @@ body {
   background-color: #03001C;
  }
 
+ a {
+  color: #03001C;
+  text-decoration: none;
+  padding-left: 15%;
+ }
+
+li {
+  padding-bottom: 5%;
+}
