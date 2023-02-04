@@ -68,3 +68,18 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/d
 ### `npm run build` fails to minify
 
 This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+
+
+=======================================
+            CREATOR COMMENTS 
+=======================================
+
+This is a simple Dashboard project created with React.js
+
+Packages used were ChartJS and MUI which you can find at:
+https://mui.com/
+https://www.chartjs.org/docs/latest/
+
+The color pallate used was located at:
+https://colorhunt.co/palette/03001c301e675b8fb9b6eada
+
